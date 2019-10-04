@@ -45,3 +45,30 @@ Without this plugin all your tests ending with *IT.java are ignored.
         </executions>
     </plugin>
 ```
+
+# Maven Build scan Plugin
+
+A build scan is a shareable record of a build that provides insights into what happened and why. You can create a build scan at scans.gradle.com for the Gradle and Maven build tools for free.
+
+Add below file extensions.xml to .mvn folder of project.
+
+For more information of build scan please refer 
+https://guides.gradle.org/creating-build-scans/
+
+
+```
+<!-- Add this to extensions.xml file and put in .mvn of project folder -->
+
+<?xml version="1.0" encoding="UTF-8"?>
+<extensions>
+  <extension>
+    <groupId>com.gradle</groupId>
+    <artifactId>gradle-enterprise-maven-extension</artifactId>
+    <version>1.0.2</version>
+  </extension>
+</extensions>
+
+
+mvn clean install
+```
+
